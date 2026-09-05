@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Menu, Search } from "lucide-react";
 
 export default function Header({ onToggleSidebar }) {
@@ -30,9 +30,9 @@ export default function Header({ onToggleSidebar }) {
         <Menu size={20} aria-hidden="true" />
       </button>
 
-      <a href="/products" className="app-logo">
+      <Link to="/products" className="app-logo">
         Product <span>Admin</span>
-      </a>
+      </Link>
 
       <form className="header-search" role="search" onSubmit={handleSubmit}>
         <input
